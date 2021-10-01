@@ -1,3 +1,4 @@
+console.log("[Assignment.js]");
 let country = "Mexico";
 let continent = "America";
 let population = 126014024;
