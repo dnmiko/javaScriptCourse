@@ -8,6 +8,7 @@ if (js === "amazing") {
 console.log(20 + 15 + 42);
 */
 
+/* Lesson 2 - Data Types
 let myNumber = 4;
 let myFloat = 4.5;
 let myString = "Hola";
@@ -23,3 +24,4 @@ console.log("Type of myUndef", typeof myUndef);
 myString = 4;
 
 console.log("Type of myString", typeof myString);
+*/
