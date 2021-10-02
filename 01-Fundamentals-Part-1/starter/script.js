@@ -25,3 +25,18 @@ myString = 4;
 
 console.log("Type of myString", typeof myString);
 */
+
+/* Lesson 4 - Basic Operators
+//Math Operators
+const firstName = "Diego";
+const lastName = "Cifuentes";
+
+console.log(firstName + " " + lastName);
+
+//Assignment Operators
+let x = 10 + 5; //x = 15
+x += 10; // x = x + 10 = 25
+x *= 4; // x = x * 4 = 100
+
+console.log(x);
+*/
