@@ -40,3 +40,16 @@ x *= 4; // x = x * 4 = 100
 
 console.log(x);
 */
+
+/* Lesson 5 - Strings and Template Literals
+const firstName = "Diego";
+const job = "developer";
+const birthYear = 1994;
+
+const age = 2021 - birthYear;
+
+const salute = "I'm " + firstName + ", a " + age + " years old " + job;
+const templateSalute = `I'm ${firstName}, a ${age} years old ${job}`;
+
+console.log(templateSalute);
+*/
