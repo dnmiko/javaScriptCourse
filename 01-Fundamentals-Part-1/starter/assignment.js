@@ -36,3 +36,18 @@ console.log(
   moreThanAverage
 );
 console.log(description);
+
+const descriptionWithTemplate = `${country} is in ${continent}, and its ${population} people speak Spanish`;
+
+console.log(descriptionWithTemplate);
+
+let messageToPrint;
+
+if (population > 33000000) {
+  messageToPrint = `${country}'s population is above average`;
+} else {
+  let differenceFromAverage = 33000000 - population;
+  messageToPrint = `${country}'s population is ${differenceFromAverage} below average`;
+}
+
+console.log(messageToPrint);
