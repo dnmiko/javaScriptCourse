@@ -1,5 +1,5 @@
 console.log("[Assignment.js]");
-let country = "Mexico";
+/* let country = "Mexico";
 let continent = "America";
 let population = 126014024;
 let isIsland = false;
@@ -50,4 +50,32 @@ if (population > 33000000) {
   messageToPrint = `${country}'s population is ${differenceFromAverage} below average`;
 }
 
-console.log(messageToPrint);
+console.log(messageToPrint); */
+
+const dolphinScore1 = 97;
+const dolphinScore2 = 112;
+const dolphinScore3 = 101;
+
+const koalaScore1 = 109;
+const koalaScore2 = 95;
+const koalaScore3 = 106;
+
+const dolphinAvg = (dolphinScore1 + dolphinScore2 + dolphinScore3) / 3;
+const koalaAvg = (koalaScore1 + koalaScore2 + koalaScore3) / 3;
+
+console.log("Dolphins Avg Score: ", dolphinAvg);
+console.log("Koalas Avg Score: ", koalaAvg);
+
+let result;
+
+if (dolphinAvg > koalaAvg && dolphinAvg >= 100) {
+  result = `Dolphins are the winners!`;
+} else if (koalaAvg > dolphinAvg && koalaAvg >= 100) {
+  result = `Koalas are the winners!`;
+} else if (dolphinAvg >= 100 && koalaAvg >= 100) {
+  result = `There is a draw`;
+} else {
+  result = `No one won because the score is lower than 100`;
+}
+
+console.log(result);
