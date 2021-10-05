@@ -53,3 +53,24 @@ const templateSalute = `I'm ${firstName}, a ${age} years old ${job}`;
 
 console.log(templateSalute);
 */
+
+/* Lesson 7 - Type Conversion and Type Coercion
+//Type Conversion
+let inputYear = "1991";
+let numberYear = "1990";
+inputYear = Number(inputYear);
+numberYear = String(numberYear);
+
+console.log(inputYear + 18);
+console.log(numberYear);
+
+//Type Coercion
+//Here, JS changes the number to String
+console.log("I'm " + 23 + " years old");
+
+//Here, JS changes the Strings to numbers because of the minus operator
+console.log("23" - "10" - 3);
+
+//Here, JS changes the number to String and appends all of the Strings together
+console.log("23" + "10" + 3);
+*/
