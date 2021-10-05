@@ -84,9 +84,6 @@ console.log(18 == "18");
 */
 
 /* Lesson 9 - Switch statement
-
-*/
-
 const day = "Wednesday";
 let activity;
 
@@ -106,3 +103,12 @@ switch (day) {
 }
 
 console.log(activity);
+*/
+
+/* Lesson 11 - Ternary operator
+
+*/
+const age = 23;
+age >= 18
+  ? console.log("You are an adult")
+  : console.log("You are not an adult");
