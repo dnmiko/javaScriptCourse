@@ -74,6 +74,7 @@ friends[0] = "Karina";
 console.log(friends);
 */
 
+/* Lesson 6 - Array methods
 const friends = ["Alfredo", "Muchi", "Fofilonga"];
 //The push method does return the length of the new array
 const newLength = friends.push("Pepe");
@@ -99,3 +100,4 @@ console.log(position);
 //The includes method return true or false whether the element we look for exists in the Array
 const contained = friends.includes("Alfredo");
 console.log(contained);
+ */
