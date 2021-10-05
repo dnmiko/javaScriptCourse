@@ -45,12 +45,10 @@ console.log(calcAgeExpression(1994));
 */
 
 /* Lesson 4 - Arrow Functions
-
- */
-
 //Arrow Function
 const calcAgeArrow = (birthYear) => {
   return 2021 - birthYear;
 };
 
 console.log(calcAgeArrow(1994));
+ */
