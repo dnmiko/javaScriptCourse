@@ -105,9 +105,21 @@ console.log(contained);
 const diego = {
   firstName: "Diego",
   lastName: "Cifuentes",
-  age: 27,
+  birthYear: 1994,
   job: "Developer",
   friends: ["Alfredo", "Muchi", "Fofilonga"],
+  hasDriverLicense: false,
+  //We can even store function expressions in the Objects
+  calcAge: function () {
+    this.age = 2021 - this.birthYear;
+    return this.age;
+  },
+  //We can use any property form the same Object using the this keyword
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()}-years old ${
+      this.job
+    }, and he has ${this.hasDriverLicense ? "a" : "no"} drivers license`;
+  },
 };
 
 //Extract information
@@ -124,3 +136,6 @@ diego.location = "Mexico";
 diego["favourite Game"] = "League Of Legends";
 
 console.log(diego);
+
+console.log(diego.getSummary());
+console.log(diego.age);
