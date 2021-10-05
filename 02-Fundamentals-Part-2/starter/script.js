@@ -102,6 +102,7 @@ const contained = friends.includes("Alfredo");
 console.log(contained);
  */
 
+/* Lesson 7 & 8 - Objects and Object Methods
 const diego = {
   firstName: "Diego",
   lastName: "Cifuentes",
@@ -139,3 +140,4 @@ console.log(diego);
 
 console.log(diego.getSummary());
 console.log(diego.age);
+*/

@@ -24,9 +24,6 @@ console.log(checkWinner(koalasAvg, dolphinsAvg));
  */
 
 /* Code challenge 2 - Arrays
-
-*/
-
 const calcTip = function (bill) {
   let tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
   return tip;
@@ -46,3 +43,38 @@ bills.forEach((bill) => {
 console.log("Bills: ", bills);
 console.log("Tips: ", tips);
 console.log("Total: ", total);
+*/
+
+/* Code Challenge 3 - Objects
+
+*/
+const mark = {
+  firstName: "Mark",
+  lastName: "Miller",
+  mass: 78,
+  height: 1.69,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+const john = {
+  firstName: "John",
+  lastName: "Smith",
+  mass: 85,
+  height: 1.88,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+mark.calcBMI();
+john.calcBMI();
+
+if (mark.bmi > john.bmi) {
+  console.log(`Marks BMI (${mark.bmi}) is higher than Johns (${john.bmi})`);
+} else {
+  console.log(`Johns BMI (${john.bmi}) is higher than Marks (${mark.bmi})`);
+}
