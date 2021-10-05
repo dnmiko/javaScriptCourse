@@ -82,3 +82,27 @@ console.log("18" === 18);
 //Loose equality operator. True because the loose operator does not perform type coercion.
 console.log(18 == "18");
 */
+
+/* Lesson 9 - Switch statement
+
+*/
+
+const day = "Wednesday";
+let activity;
+
+switch (day) {
+  case "Monday": //This one is an strict comparison, day === 'Monday'
+    activity = "Reading";
+    break;
+  case "Tuesday":
+    activity = "Swimming";
+    break;
+  case "Wednesday":
+  case "Thursday": //Adding the same code block to two different cases or scenarios
+    activity = "Gaming";
+    break;
+  default:
+    activity = "Rest";
+}
+
+console.log(activity);
