@@ -54,8 +54,6 @@ console.log(calcAgeArrow(1994));
  */
 
 /* Lesson 5 - Arrays
-
-*/
 const friends = ["Alfredo", "Muchi", "Fofilonga"];
 
 const years = new Array(1994, 1997, 1990);
@@ -74,3 +72,30 @@ console.log(
 //Mutate the array in an specific position
 friends[0] = "Karina";
 console.log(friends);
+*/
+
+const friends = ["Alfredo", "Muchi", "Fofilonga"];
+//The push method does return the length of the new array
+const newLength = friends.push("Pepe");
+console.log(friends);
+
+//The unshift method adds element to the beginning of the method
+friends.unshift("Sara");
+console.log(friends);
+
+//The pop method removes the last element of the array
+friends.pop();
+friends.pop();
+console.log(friends);
+
+//The shift method removes the first element of the array
+friends.shift();
+console.log(friends);
+
+//The indexOf method returns the index of a given element if found
+const position = friends.indexOf("Muchi");
+console.log(position);
+
+//The includes method return true or false whether the element we look for exists in the Array
+const contained = friends.includes("Alfredo");
+console.log(contained);
