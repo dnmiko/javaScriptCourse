@@ -52,3 +52,25 @@ const calcAgeArrow = (birthYear) => {
 
 console.log(calcAgeArrow(1994));
  */
+
+/* Lesson 5 - Arrays
+
+*/
+const friends = ["Alfredo", "Muchi", "Fofilonga"];
+
+const years = new Array(1994, 1997, 1990);
+
+//Extract the element from an specific position
+console.log(`The first element of the friends array is ${friends[0]}`);
+
+//Get the lenght of a given array
+console.log(`The lenght of the friends array is ${friends.length}`);
+
+//Extract the last element of an array
+console.log(
+  `The last element of the years array is ${years[years.length - 1]}`
+);
+
+//Mutate the array in an specific position
+friends[0] = "Karina";
+console.log(friends);
