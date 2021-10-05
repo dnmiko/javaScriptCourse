@@ -101,3 +101,26 @@ console.log(position);
 const contained = friends.includes("Alfredo");
 console.log(contained);
  */
+
+const diego = {
+  firstName: "Diego",
+  lastName: "Cifuentes",
+  age: 27,
+  job: "Developer",
+  friends: ["Alfredo", "Muchi", "Fofilonga"],
+};
+
+//Extract information
+const interestedIn = prompt("What do you want know about Diego?");
+
+if (diego[interestedIn]) {
+  console.log(diego[interestedIn]);
+} else {
+  console.log("There is no property with that name");
+}
+
+//Add information
+diego.location = "Mexico";
+diego["favourite Game"] = "League Of Legends";
+
+console.log(diego);
