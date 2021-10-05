@@ -141,3 +141,10 @@ console.log(diego);
 console.log(diego.getSummary());
 console.log(diego.age);
 */
+
+/* Lesson 9 - For Loop
+
+*/
+for (let i = 1; i < 11; i++) {
+  console.log(`Lifting weights, reptition ${i}`);
+}
