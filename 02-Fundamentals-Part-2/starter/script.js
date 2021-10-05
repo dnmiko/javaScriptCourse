@@ -11,9 +11,6 @@ if (hasDriversLicense) console.log("I can drive");
 */
 
 /* Lesson 2 - Functions
-
-*/
-
 function logger() {
   console.log("My name is Diego");
 }
@@ -30,3 +27,21 @@ const fruitJuice = fruitProcessor(3, 4);
 
 console.log(orangeJuice);
 console.log(fruitJuice);
+*/
+
+/* Lesson 3 - Function Declaration and Function Expression
+
+*/
+
+//Function Declaration
+function calcAgeDeclaration(birthYear) {
+  return 2021 - birthYear;
+}
+
+//Function Expression
+const calcAgeExpression = function (birthYear) {
+  return 2021 - birthYear;
+};
+
+console.log(calcAgeDeclaration(1994));
+console.log(calcAgeExpression(1994));
