@@ -50,7 +50,7 @@ if (population > 33000000) {
   messageToPrint = `${country}'s population is ${differenceFromAverage} below average`;
 }
 
-console.log(messageToPrint); */
+console.log(messageToPrint); 
 
 const dolphinScore1 = 97;
 const dolphinScore2 = 112;
@@ -78,4 +78,13 @@ if (dolphinAvg > koalaAvg && dolphinAvg >= 100) {
   result = `No one won because the score is lower than 100`;
 }
 
-console.log(result);
+console.log(result); */
+
+const bill = 450;
+let tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+console.log(
+  `The bill was ${bill}, the tip was ${tip} and the total value was ${
+    bill + tip
+  }`
+);
