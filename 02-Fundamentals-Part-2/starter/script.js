@@ -30,9 +30,6 @@ console.log(fruitJuice);
 */
 
 /* Lesson 3 - Function Declaration and Function Expression
-
-*/
-
 //Function Declaration
 function calcAgeDeclaration(birthYear) {
   return 2021 - birthYear;
@@ -45,3 +42,15 @@ const calcAgeExpression = function (birthYear) {
 
 console.log(calcAgeDeclaration(1994));
 console.log(calcAgeExpression(1994));
+*/
+
+/* Lesson 4 - Arrow Functions
+
+ */
+
+//Arrow Function
+const calcAgeArrow = (birthYear) => {
+  return 2021 - birthYear;
+};
+
+console.log(calcAgeArrow(1994));
