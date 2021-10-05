@@ -74,3 +74,11 @@ console.log("23" - "10" - 3);
 //Here, JS changes the number to String and appends all of the Strings together
 console.log("23" + "10" + 3);
 */
+
+/* Lesson 8 - Equality operators
+//Strict equality operator. False because the types are different
+console.log("18" === 18);
+
+//Loose equality operator. True because the loose operator does not perform type coercion.
+console.log(18 == "18");
+*/
