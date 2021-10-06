@@ -143,8 +143,59 @@ console.log(diego.age);
 */
 
 /* Lesson 9 - For Loop
-
-*/
 for (let i = 1; i < 11; i++) {
   console.log(`Lifting weights, reptition ${i}`);
 }
+
+const diego = [
+  "Diego",
+  "Cifuentes",
+  1994,
+  "Developer",
+  ["Alfredo", "Muchi", "Fofilonga"],
+  false,
+];
+
+const typeDiego = [];
+
+for (let i = 0; i < diego.length; i++) {
+  console.log(diego[i]);
+  typeDiego.push(typeof diego[i]);
+}
+
+console.log(typeDiego); 
+
+const ages = [];
+
+const birthYears = [1999, 1990, 1964, 1965, 1850, 2002];
+
+birthYears.forEach((year) => {
+  return ages.push(2021 - year);
+});
+
+console.log(ages);
+
+//Continue and brake statements
+for (let i = 0; i < diego.length; i++) {
+  if (typeof diego[i] !== "string") continue;
+
+  console.log(diego[i]);
+}
+
+for (let i = 0; i < diego.length; i++) {
+  if (typeof diego[i] === "number") break;
+
+  console.log(diego[i]);
+} 
+
+for (let i = diego.length - 1; i > -1; i--) {
+  console.log(diego[i]);
+}
+
+for (let i = 1; i < 4; i++) {
+  console.log(`Starting excercise ${i}`);
+  for (let j = 1; j < 6; j++) {
+    console.log(`Repetition ${j}`);
+  }
+}
+*/
