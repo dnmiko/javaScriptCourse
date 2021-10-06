@@ -46,8 +46,6 @@ console.log("Total: ", total);
 */
 
 /* Code Challenge 3 - Objects
-
-*/
 const mark = {
   firstName: "Mark",
   lastName: "Miller",
@@ -78,3 +76,38 @@ if (mark.bmi > john.bmi) {
 } else {
   console.log(`Johns BMI (${john.bmi}) is higher than Marks (${mark.bmi})`);
 }
+*/
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+let tip;
+
+const calcTip = function (bill) {
+  let tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+  return tip;
+};
+
+bills.forEach((bill) => {
+  tip = calcTip(bill);
+  tips.push(tip);
+  totals.push(bill + tip);
+});
+
+console.log("Bills: ", bills);
+console.log("Tips: ", tips);
+console.log("Total: ", totals);
+
+const calcAvg = function (arr) {
+  let sum = 0;
+
+  arr.forEach((el) => {
+    sum += el;
+  });
+
+  return sum / arr.length;
+};
+
+console.log(`The average for bills is ${calcAvg(bills)}`);
+console.log(`The average for tips is ${calcAvg(tips)}`);
+console.log(`The average for totals is ${calcAvg(totals)}`);
