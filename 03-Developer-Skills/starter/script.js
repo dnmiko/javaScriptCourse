@@ -20,5 +20,3 @@ const calcTempAmplitude = function (array) {
 
     return highestValue - lowestValue;
 };
-
-console.log(calcTempAmplitude(temperatures));
