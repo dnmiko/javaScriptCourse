@@ -11,7 +11,7 @@ document.querySelector('.score').textContent = 20;
 
 document.querySelector('.guess').value = 100;
 console.log(document.querySelector('.guess').value); */
-const rdmNum = Math.trunc(Math.random() * 19 + 1);
+let rdmNum = Math.trunc(Math.random() * 19 + 1);
 let score = 20;
 let highScore = 0;
 let winner = false;
@@ -40,7 +40,9 @@ document.querySelector('.check').addEventListener('click', function () {
         document.querySelector(
             '.message'
         ).textContent = `You guessed correctly!`;
-        highScore = score;
+
+        if (score > highScore) highScore = score;
+
         document.querySelector('body').style.backgroundColor = '#1bb55e';
         document.querySelector('.number').style.width = '30rem';
         document.querySelector('.number').textContent = rdmNum;
@@ -53,4 +55,17 @@ document.querySelector('.check').addEventListener('click', function () {
         document.querySelector('.message').textContent = `You lost :(`;
         return;
     }
+});
+
+document.querySelector('.again').addEventListener('click', function () {
+    rdmNum = Math.trunc(Math.random() * 19 + 1);
+    score = 20;
+    winner = false;
+
+    document.querySelector('.number').textContent = `?`;
+    document.querySelector('.number').style.width = '15rem';
+    document.querySelector('body').style.backgroundColor = '#222';
+    document.querySelector('.message').textContent = `Start guessing...`;
+    document.querySelector('.guess').value = '';
+    document.querySelector('.score').textContent = score;
 });
