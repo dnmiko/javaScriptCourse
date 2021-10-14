@@ -26,4 +26,33 @@ const restaurant = {
       close: 24,
     },
   },
+
+  //Return different values from the same function using destructuring
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
 };
+
+//First example of destructuring
+const arr = [0, 1, 2];
+
+//This is the old and hard way to do it
+const a = arr[0];
+const b = arr[1];
+const c = arr[2];
+
+//Destructuring
+const [x, y, z] = arr;
+console.log(x, y, z);
+
+//We don't have to destructure all of the properties from the array
+const [cat1, , cat3] = restaurant.categories;
+console.log(cat1, cat3);
+
+//Return different values from the same function using destructuring
+const [starterDish, mainDish] = restaurant.order(2, 0);
+console.log(starterDish, mainDish);
+
+//Default values for the variables we create to destructure
+const [first, second, third = 1] = [8, 9];
+console.log(first, second, third);
