@@ -56,3 +56,21 @@ console.log(starterDish, mainDish);
 //Default values for the variables we create to destructure
 const [first, second, third = 1] = [8, 9];
 console.log(first, second, third);
+
+//Destructuring objects
+const { name, categories, openingHours } = restaurant;
+console.log(name, categories, openingHours);
+
+//Assigning a different name to the variables
+const { name: restName, categories: tags, openingHours: hours } = restaurant;
+console.log(restName, tags, hours);
+
+//Assigning a default value to undefined variables
+const { menu = [] } = restaurant;
+console.log(menu);
+
+//Destructuring nested objects
+const {
+  fri: { open, close },
+} = openingHours;
+console.log(open, close);
