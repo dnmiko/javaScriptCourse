@@ -74,3 +74,28 @@ const {
   fri: { open, close },
 } = openingHours;
 console.log(open, close);
+
+//Split operator
+const newMainMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMainMenu);
+
+//Merge 2 different arrays
+const completeMenu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+console.log(completeMenu);
+
+//Rest pattern
+const [d, e, ...others] = [1, 2, 3, 4, 5];
+console.log(a, b, others);
+
+//Rest parameters
+const add = function (...numbers) {
+  let sum = 0;
+  numbers.forEach(num => {
+    sum += num;
+  });
+  console.log(sum);
+};
+
+add(2, 3);
+add(4, 5, 6);
+add(1, 2, 3, 4, 5, 6, 7, 8, 9);
