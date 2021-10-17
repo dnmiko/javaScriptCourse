@@ -101,8 +101,12 @@ add(4, 5, 6);
 add(1, 2, 3, 4, 5, 6, 7, 8, 9);
 
 //Short circuiting with the OR operator
-const numGuests = restaurant.guests || 5;
+let numGuests = restaurant.guests || 5;
 
 //Short circuiting with the AND operator
 const shortCir = 7 && true && 'Diego';
 console.log(shortCir);
+
+//Nullish coalescing. Works with null values instead of falsy ones
+restaurant.guests = 0;
+numGuests = restaurant.guests ?? 10;
