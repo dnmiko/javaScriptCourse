@@ -80,3 +80,28 @@ const likelyWin =
   (draw < team1 &&
     draw < team2 &&
     console.log('The draw is more likely to happen'));
+
+//Loop through an array printing something
+const goalInfo = [...game.scored.entries()];
+for (const [index, player] of goalInfo) {
+  console.log(`Goal ${index + 1}: ${player}`);
+}
+
+//Loop through an object to calculate a value
+const oddValues = [...Object.values(game.odds)];
+let sum = 0;
+
+for (const odd of oddValues) {
+  sum += odd;
+}
+
+let avgOdd = sum / oddValues.length;
+console.log(avgOdd);
+
+//Loop through both an array and an Object
+const odds = [...Object.entries(game.odds)];
+
+for (const [index, odd] of odds) {
+  let victoryStr = `Odd of victory ${game[index] ?? `draw`}: ${odd}`;
+  console.log(victoryStr);
+}
