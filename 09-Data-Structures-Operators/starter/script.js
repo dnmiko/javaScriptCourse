@@ -110,3 +110,13 @@ console.log(shortCir);
 //Nullish coalescing. Works with null values instead of falsy ones
 restaurant.guests = 0;
 numGuests = restaurant.guests ?? 10;
+
+//Old way to do conditional chaining
+if (restaurant.openingHours && restaurant.openingHours.fri) {
+  const openFriday = restaurant.openingHours.fri.open;
+}
+
+//Using the optional chaining operator
+const openMonday = restaurant.openingHours.mon?.open;
+//This returns undefined instead of breaking
+console.log(openMonday);
