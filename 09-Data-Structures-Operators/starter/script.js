@@ -120,3 +120,9 @@ if (restaurant.openingHours && restaurant.openingHours.fri) {
 const openMonday = restaurant.openingHours.mon?.open;
 //This returns undefined instead of breaking
 console.log(openMonday);
+
+//Looping over objects
+const entries = Object.entries(restaurant.openingHours);
+for (const [key, { open, close }] of entries) {
+  console.log(`On ${key} we open at ${open} and close at ${close}`);
+}
