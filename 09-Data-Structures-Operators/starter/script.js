@@ -141,3 +141,39 @@ for (const order of ordersSet) console.log(order);
 const staff = ['Chef', 'Chef', 'Janitor', 'Waiter', 'Waiter', 'Waiter'];
 let uniqueStaff = [...new Set(staff)];
 console.log(uniqueStaff);
+
+//Maps
+const restaurantMap = new Map();
+restaurantMap.set('name', 'Classico');
+restaurantMap.set(1, 'Firenze, Italy');
+restaurantMap.set(2, 'Lisbon, Portugal');
+console.log(restaurantMap);
+
+console.log(restaurantMap.get(1));
+console.log(restaurantMap.get('name'));
+
+console.log(restaurantMap.has(true));
+restaurantMap.delete(2);
+console.log(restaurantMap.has(2));
+
+//Convert object to map
+const hoursMap = new Map(Object.entries(restaurant.openingHours));
+console.log(hoursMap);
+
+const question = new Map([
+  ['Question', 'What is the best programming language?'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'Javascript'],
+  ['Correct', 3],
+  [true, 'Correct!'],
+  [false, 'Try again'],
+]);
+
+console.log(question.get('Question'));
+for (const [key, value] of question) {
+  if (typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+}
+
+const answer = Number(prompt('Your answer'));
+console.log(question.get(question.get('Correct') === answer));
