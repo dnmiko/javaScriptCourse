@@ -138,3 +138,22 @@ for (const [minute, event] of gameEvents) {
     `[${minute < 45 ? 'First half' : 'Second half'}] ${minute}: ${event}`
   );
 }
+
+//Fourth challenge. Convert underscore_case to camelCase
+const convertFormat = function (variables) {
+  const aux = variables.split('\n');
+  const formatedVar = [];
+
+  for (const word of aux) {
+    const [firstWord, secondWord] = word.toLowerCase().trim().split('_');
+    formatedVar.push(
+      firstWord + secondWord.replace(secondWord[0], secondWord[0].toUpperCase())
+    );
+  }
+
+  return formatedVar;
+};
+
+convertFormat(
+  'underscore_case\n    first_name\nSome_Variable\n    calculate_AGE\n delayed_departure'
+);
