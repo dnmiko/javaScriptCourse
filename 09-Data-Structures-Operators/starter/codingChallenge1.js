@@ -105,3 +105,36 @@ for (const [index, odd] of odds) {
   let victoryStr = `Odd of victory ${game[index] ?? `draw`}: ${odd}`;
   console.log(victoryStr);
 }
+
+const gameEvents = new Map([
+  [17, '⚽ GOAL'],
+  [36, 'Substitution'],
+  [47, '⚽ GOAL'],
+  [61, 'Substitution'],
+  [64, 'Yellow card'],
+  [69, 'Red card'],
+  [70, 'Substitution'],
+  [72, 'Substitution'],
+  [76, '⚽ GOAL'],
+  [80, '⚽ GOAL'],
+  [92, 'Yellow card'],
+]);
+
+//Create an array without duplicates from a map
+const auxiliarSet = new Set(gameEvents.values());
+
+const uniqueEvents = [...auxiliarSet];
+console.log(uniqueEvents);
+
+gameEvents.delete(64);
+console.log(gameEvents);
+
+console.log(
+  `An event happended, on average, every ${90 / gameEvents.size} minutes`
+);
+
+for (const [minute, event] of gameEvents) {
+  console.log(
+    `[${minute < 45 ? 'First half' : 'Second half'}] ${minute}: ${event}`
+  );
+}

@@ -160,7 +160,7 @@ console.log(restaurantMap.has(2));
 const hoursMap = new Map(Object.entries(restaurant.openingHours));
 console.log(hoursMap);
 
-const question = new Map([
+/* const question = new Map([
   ['Question', 'What is the best programming language?'],
   [1, 'C'],
   [2, 'Java'],
@@ -176,4 +176,4 @@ for (const [key, value] of question) {
 }
 
 const answer = Number(prompt('Your answer'));
-console.log(question.get(question.get('Correct') === answer));
+console.log(question.get(question.get('Correct') === answer)); */
