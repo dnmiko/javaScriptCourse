@@ -62,10 +62,10 @@ const { team1, x: draw, team2 } = game.odds;
 //Use the rest parameters to receive an arbitrary number of parameters
 const printGoals = function (...playersNames) {
   playersNames.forEach(player => {
-    console.log(player);
+    //console.log(player);
   });
 
-  console.log(`Total of goals scored: ${playersNames.length}`);
+  //console.log(`Total of goals scored: ${playersNames.length}`);
 };
 //printGoals(...game.scored);
 
@@ -84,7 +84,7 @@ const likelyWin =
 //Loop through an array printing something
 const goalInfo = [...game.scored.entries()];
 for (const [index, player] of goalInfo) {
-  console.log(`Goal ${index + 1}: ${player}`);
+  //console.log(`Goal ${index + 1}: ${player}`);
 }
 
 //Loop through an object to calculate a value
@@ -96,14 +96,14 @@ for (const odd of oddValues) {
 }
 
 let avgOdd = sum / oddValues.length;
-console.log(avgOdd);
+//console.log(avgOdd);
 
 //Loop through both an array and an Object
 const odds = [...Object.entries(game.odds)];
 
 for (const [index, odd] of odds) {
   let victoryStr = `Odd of victory ${game[index] ?? `draw`}: ${odd}`;
-  console.log(victoryStr);
+  //console.log(victoryStr);
 }
 
 const gameEvents = new Map([
@@ -124,10 +124,10 @@ const gameEvents = new Map([
 const auxiliarSet = new Set(gameEvents.values());
 
 const uniqueEvents = [...auxiliarSet];
-console.log(uniqueEvents);
+//console.log(uniqueEvents);
 
 gameEvents.delete(64);
-console.log(gameEvents);
+//console.log(gameEvents);
 
 console.log(
   `An event happended, on average, every ${90 / gameEvents.size} minutes`
