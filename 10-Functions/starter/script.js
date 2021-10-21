@@ -38,7 +38,7 @@ const transformStr = function (str, fn) {
   console.log(`Transformed by: ${fn.name}`);
 };
 
-transformStr('Hola soy Diego', upperFirstWord);
+//transformStr('Hola soy Diego', upperFirstWord);
 
 //Higher-order functions that return functions
 const greet = greeting => {
@@ -47,8 +47,42 @@ const greet = greeting => {
   };
 };
 
-const greetinMsg = greet('Hola');
-greetinMsg('Diego');
-greetinMsg('Fof');
+//const greetinMsg = greet('Hola');
+//greetinMsg('Diego');
+//greetinMsg('Fof');
 
-greet('Alo')('Fafi');
+//greet('Alo')('Fafi');
+
+//Call and Apply Method
+const lufthansa = {
+  airline: 'Lufthansa',
+  iataCode: 'LH',
+  bookings: [],
+  book: function (flightNum, passengerName) {
+    console.log(
+      `${passengerName} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
+    );
+    this.bookings.push({
+      flight: `${this.iataCode}${flightNum}`,
+      passengerName,
+    });
+  },
+};
+
+lufthansa.book(239, 'Diego');
+lufthansa.book(145, 'Cris');
+
+const eurowings = {
+  airline: 'Eurowings',
+  iataCode: 'EW',
+  bookings: [],
+};
+
+//Here we are creating a new regular function, where the this keyword does not exist, it is no longer a method inside an object
+const book = lufthansa.book;
+
+//The call method helps us to assign the this keyword a value or an owner
+book.call(eurowings, 456, 'Muchi');
+
+//The apply method lets us do the same as the call method (to apply a this keyword) but it does receive an array with the parameters instead of the params itself
+book.apply(lufthansa, [654, 'Pepe']);
