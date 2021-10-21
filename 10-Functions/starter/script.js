@@ -86,3 +86,20 @@ book.call(eurowings, 456, 'Muchi');
 
 //The apply method lets us do the same as the call method (to apply a this keyword) but it does receive an array with the parameters instead of the params itself
 book.apply(lufthansa, [654, 'Pepe']);
+
+//Bind method creates a new function with the this keyword pointing to the object we share.
+const euroWingsBooking = book.bind(eurowings);
+//This is a new function with the this keyword being eurowings
+euroWingsBooking(789, 'Jorge');
+
+//Bind method with Event Listeners
+lufthansa.planes = 300;
+lufthansa.buyPlane = function () {
+  this.planes++;
+  console.log(`Number of planes for ${this.airline}: ${this.planes}`);
+};
+
+//For the Event Listeners the 'this' keyword points to the DOM element tat was clicked. Here we use the bind method instead of call because the EventHandler is waiting for a function, not the call of a function
+document
+  .querySelector('.buy')
+  .addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
