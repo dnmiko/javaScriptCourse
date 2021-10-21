@@ -17,7 +17,25 @@ const createBooking = function (flightNum, numPassengers = 1, price = 500) {
   bookings.push(booking);
 };
 
-createBooking('A340');
-createBooking('A340', 5);
+createBooking('A340'); //Two default parameters at the end
+createBooking('A340', 5); // One default param
 createBooking('A340', 5, 2500);
-console.log(bookings);
+
+//Higher-order functions
+const delWhitespaces = function (str) {
+  return str.toLowerCase().replace(/ /g, '');
+};
+
+const upperFirstWord = function (str) {
+  const [firstWord, ...others] = str.split(' ');
+  return [firstWord.toUpperCase(), ...others].join(' ');
+};
+
+const transformStr = function (str, fn) {
+  console.log(`Original string: ${str}`);
+  console.log(`Transformed string: ${fn(str)}`);
+
+  console.log(`Transformed by: ${fn.name}`);
+};
+
+transformStr('Hola soy Diego', upperFirstWord);
