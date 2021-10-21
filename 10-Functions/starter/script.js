@@ -39,3 +39,16 @@ const transformStr = function (str, fn) {
 };
 
 transformStr('Hola soy Diego', upperFirstWord);
+
+//Higher-order functions that return functions
+const greet = greeting => {
+  return name => {
+    console.log(`${greeting} ${name}`);
+  };
+};
+
+const greetinMsg = greet('Hola');
+greetinMsg('Diego');
+greetinMsg('Fof');
+
+greet('Alo')('Fafi');
