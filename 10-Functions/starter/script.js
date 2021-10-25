@@ -103,3 +103,19 @@ lufthansa.buyPlane = function () {
 document
   .querySelector('.buy')
   .addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
+
+const secureBooking = function () {
+  let passengerCount = 0;
+
+  return function () {
+    passengerCount++;
+    console.log(passengerCount);
+  };
+};
+
+//This function has access to the passenger count variable created in the Execution Stack from secure booking
+const booker = secureBooking();
+
+booker();
+booker();
+booker();

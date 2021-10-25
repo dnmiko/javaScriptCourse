@@ -55,4 +55,4 @@ const testData1 = {
   count: [5, 2, 3],
 };
 const printInfo = poll.displayResults.bind(testData1);
-printInfo('string');
+//printInfo('string');
